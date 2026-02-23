@@ -40,5 +40,34 @@ Si tienes un potrero de **10 hectáreas** con una producción de **8,000 kg** de
 
 ---
 
+## 🐄 Tabla de Equivalencias (UGG)
+
+No todos los animales consumen lo mismo. Para usar la fórmula correctamente, convierte tus animales a **Unidades Gran Ganado (UGG)** usando esta tabla de referencia:
+
+| Categoría Animal | Peso Promedio | Equivalencia UGG |
+| :--- | :--- | :--- |
+| **Vaca parida (vaca + cría)** | 450 - 500 kg | **1.25 UGG** |
+| **Vaca horra / Toro adulto** | 450 kg | **1.00 UGG** |
+| **Novillo (2 - 3 años)** | 350 kg | **0.80 UGG** |
+| **Anojo (1 - 2 años)** | 250 kg | **0.60 UGG** |
+| **Ternero (Destete)** | 150 kg | **0.40 UGG** |
+
+### Cómo usar la tabla:
+Si el resultado de tu cálculo anterior fue de **9.13 UGG**, esto significa que puedes tener:
+* Aproximadamente **7 vacas paridas** ($9.13 \div 1.25$).
+* O unos **15 anojos** ($9.13 \div 0.60$).
+* O **9 toros adultos** ($9.13 \div 1.00$).
+
+---
+
+## 🚩 Señales de Alerta
+* **Sobrepastoreo:** Si ves el suelo desnudo o raíces expuestas, tu carga animal es superior a la capacidad de tu forraje.
+* **Subutilización:** Si el pasto se ve "encañado" o seco sin ser consumido, puedes aumentar ligeramente la carga o cortar para ensilaje.
+
+> **Consejo del Cesar:** En el departamento, el sistema de **pastoreo rotacional** (dividir el potrero en secciones pequeñas) aumenta la eficiencia de la fórmula hasta en un **20%**.
+
+
+---
+
 ## 💡 Recomendación Técnica
 En épocas de sequía en municipios como **El Copey o Bosconia**, la eficiencia puede bajar al **30%**. Se recomienda siempre dejar un margen de seguridad para no sobrepastorear.
