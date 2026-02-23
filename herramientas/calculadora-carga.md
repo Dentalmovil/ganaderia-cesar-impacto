@@ -9,53 +9,41 @@ Esta herramienta te ayudará a estimar la carga animal óptima para tu potrero, 
 
 ---
 
-<div style="max-width: 600px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; background-color: #f9f9f9;">
-    <h3 style="color: #2e7d32; text-align: center; margin-bottom: 20px;">Estima la Carga de tu Potrero</h3>
+# Calculadora de Carga Animal
 
-    <div style="margin-bottom: 15px;">
-        <label for="area" style="display: block; margin-bottom: 5px; font-weight: bold;">Área del Potrero (hectáreas):</label>
-        <input type="number" id="area" value="1" min="0.1" step="0.1" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
-    </div>
+Estima la capacidad de tu potrero rápidamente.
 
-    <div style="margin-bottom: 15px;">
-        <label for="forraje" style="display: block; margin-bottom: 5px; font-weight: bold;">Disponibilidad de Forraje (kg MS/ha/año):</label>
-        <input type="number" id="forraje" value="8000" min="1000" step="100" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
-        <small style="color: #666;">*Kilos de Materia Seca por hectárea por año.</small>
-    </div>
+<div style="max-width: 600px; margin: 20px auto; padding: 20px; border: 1px solid #2e7d32; border-radius: 8px; background-color: #f9f9f9; font-family: sans-serif;">
+    <h3 style="color: #2e7d32; text-align: center;">Estima la Carga de tu Potrero</h3>
 
-    <div style="margin-bottom: 15px;">
-        <label for="consumo" style="display: block; margin-bottom: 5px; font-weight: bold;">Consumo Promedio por UGG (kg MS/UGG/día):</label>
-        <input type="number" id="consumo" value="12" min="5" step="0.5" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
-        <small style="color: #666;">*Kilos de Materia Seca por Unidad Gran Ganado por día.</small>
-    </div>
+    <label style="display:block; margin-top:10px;">Área (Hectáreas):</label>
+    <input type="number" id="area" value="1" style="width:100%; padding:8px; margin-top:5px; border:1px solid #ccc; border-radius:4px;">
 
-    <button onclick="calcularCarga()" style="width: 100%; padding: 10px 15px; background-color: #2e7d32; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; margin-top: 10px;">Calcular Carga Animal</button>
+    <label style="display:block; margin-top:10px;">Forraje (kg MS/ha/año):</label>
+    <input type="number" id="forraje" value="8000" style="width:100%; padding:8px; margin-top:5px; border:1px solid #ccc; border-radius:4px;">
 
-    <div style="margin-top: 20px; padding: 10px; background-color: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 4px;">
-        <p style="margin: 0; font-weight: bold;">Carga Animal Estimada:</p>
-        <p id="resultadoCarga" style="font-size: 20px; color: #1b5e20; font-weight: bold;">0 UGG</p>
-        <small style="color: #666;">*Unidades Gran Ganado (450 kg).</small>
+    <label style="display:block; margin-top:10px;">Consumo (kg MS/animal/día):</label>
+    <input type="number" id="consumo" value="12" style="width:100%; padding:8px; margin-top:5px; border:1px solid #ccc; border-radius:4px;">
+
+    <button onclick="ejecutarCalculo()" style="width:100%; background:#2e7d32; color:white; padding:12px; border:none; border-radius:4px; margin-top:20px; cursor:pointer; font-weight:bold;">Calcular Ahora</button>
+
+    <div style="margin-top:20px; padding:15px; background:#e8f5e9; border-radius:4px; text-align:center;">
+        <span style="display:block; font-weight:bold; color:#1b5e20;">Resultado:</span>
+        <span id="resultadoCarga" style="font-size:24px; font-weight:bold; color:#2e7d32;">-- UGG</span>
     </div>
 </div>
 
 <script>
-    function calcularCarga() {
-        const area = parseFloat(document.getElementById('area').value);
-        const forraje = parseFloat(document.getElementById('forraje').value);
-        const consumo = parseFloat(document.getElementById('consumo').value);
-
-        if (isNaN(area) || isNaN(forraje) || isNaN(consumo) || area <= 0 || forraje <= 0 || consumo <= 0) {
-            document.getElementById('resultadoCarga').innerText = "Ingrese valores válidos";
-            return;
-        }
-
-        // Conversión de forraje anual a diario y ajuste por eficiencia de uso (ej. 50-60%)
-        const forrajeDisponibleDiario = (forraje * area * 0.55) / 365; // Usamos 55% de eficiencia de pastoreo
-
-        const cargaAnimal = forrajeDisponibleDiario / consumo;
-
-        document.getElementById('resultadoCarga').innerText = `${cargaAnimal.toFixed(2)} UGG`;
+  function ejecutarCalculo() {
+    const a = parseFloat(document.getElementById('area').value);
+    const f = parseFloat(document.getElementById('forraje').value);
+    const c = parseFloat(document.getElementById('consumo').value);
+    
+    if(a > 0 && f > 0 && c > 0) {
+      const res = ((f * a * 0.55) / 365) / c;
+      document.getElementById('resultadoCarga').innerText = res.toFixed(2) + " UGG";
+    } else {
+      alert("Por favor ingresa valores mayores a cero");
     }
-    // Calcular al cargar para mostrar un valor inicial
-    document.addEventListener('DOMContentLoaded', calcularCarga);
+  }
 </script>
