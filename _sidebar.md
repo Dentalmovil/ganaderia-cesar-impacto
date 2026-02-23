@@ -5,7 +5,8 @@
   * [Impacto Económico](investigacion/economico.md)
   * [Impacto Social](investigacion/social.md)
   * [Impacto Productivo](investigacion/productivo.md)
-  * [Impacto Conclusión](investigación/conclusion.md)
+  * [Impacto Productivo](investigacion/productivo.md)
+* [Conclusión](conclusion.md)
 
 * **Normativa ICA**
   * [Trazabilidad Animal](ica/trazabilidad.md)
