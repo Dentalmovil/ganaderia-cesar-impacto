@@ -5,7 +5,7 @@
   * [Impacto Económico](investigacion/economico.md)
   * [Impacto Social](investigacion/social.md)
   * [Impacto Productivo](investigacion/productivo.md)
-  * [Impacto Productivo](investigacion/productivo.md)
+  * [Impacto conclusion](investigacion/productivo.md)
 * [Conclusión](conclusion.md)
 
 * **Normativa ICA**
