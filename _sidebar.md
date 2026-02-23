@@ -41,6 +41,15 @@
 * **Financiamiento**
   * [Créditos Finagro](finanzas/creditos.md)
 
+* **Investigación**
+  * ... (tus otros archivos)
+  * [Glosario Ganadero](investigacion/glosario.md)
+
+* **Normativa ICA**
+  * ... (tus otros archivos)
+  * [Contactos de Emergencia](ica/contactos.md)
+
+
 * **Conclusión**
   * [Finalización del Proyecto](conclusion.md)
 
